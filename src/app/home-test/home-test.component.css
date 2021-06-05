@@ -1,0 +1,23 @@
+.headerLayout{
+    width:100vm;
+    height:10vh;
+    background-color: pink;
+}
+
+.navigateLayout{
+    width:100vm;
+    height:5vh;
+    background-color:blue;
+}
+
+.contentLayout{
+    width:100vm;
+    height:75vh;
+    background-color: yellow;
+}
+
+.footerLayout{
+    width:100vm;
+    height:10vh;
+    background-color: gray;
+}
