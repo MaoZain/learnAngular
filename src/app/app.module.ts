@@ -14,6 +14,12 @@ import {LayoutModule} from '@angular/cdk/layout';
 import { HeaderComponent } from './header/header.component';
 import {MatButtonModule} from '@angular/material/button';
 import { ContentComponent } from './content/content.component';
+import { TableComponent } from './table/table.component';
+import { TableExampleComponent } from './table-example/table-example.component';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -23,7 +29,9 @@ import { ContentComponent } from './content/content.component';
     HeroDetailComponent,
     HomeTestComponent,
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    TableComponent,
+    TableExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +41,10 @@ import { ContentComponent } from './content/content.component';
     BrowserAnimationsModule,
     MatGridListModule,
     LayoutModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatPaginatorModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

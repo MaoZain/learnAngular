@@ -1,0 +1,23 @@
+<div id="header-container">
+    <div class="search-wrapper">
+        <span class="material-icons" id="search">
+            search
+        </span>
+        <input type="text" placeholder="Search.." name="search" (keyup)="doFilter($event)"
+            autocomplete="off">
+    </div>
+    <div class="paginator-wrapper">
+        <mat-paginator [pageSizeOptions]="[10, 50, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+</div>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <div *ngFor="let column of tableData['name']; let i = index">
+        <ng-container [matColumnDef]="tableData['name'][i]">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> {{tableData['display'][i]}} </th>
+            <td mat-cell *matCellDef="let element"> {{element[tableData['name'][i]]}} </td>
+        </ng-container>
+    </div>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
